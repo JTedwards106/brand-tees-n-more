@@ -25,10 +25,10 @@ export function NavLinks() {
         <a
           aria-current="page"
           className="transition-colors bg-primary-container text-on-primary-container font-semibold rounded-full px-space-md py-space-xs shadow-sm whitespace-nowrap"
-          data-path="home"
+          data-path="shirts"
           href="#"
         >
-          Home
+          Shirts
         </a>
         <a
           className="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-md py-space-xs rounded-full transition-colors whitespace-nowrap"
@@ -39,10 +39,10 @@ export function NavLinks() {
         </a>
         <a
           className="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-md py-space-xs rounded-full transition-colors whitespace-nowrap"
-          data-path="contact"
+          data-path="more-info"
           href="#"
         >
-          Contact
+          More Info
         </a>
       </nav>
       <div className="flex items-center gap-space-md shrink-0">

@@ -3,7 +3,7 @@ export function Footer() {
   return (
     <>
       <div className="max-w-[1200px] mx-auto px-margin-desktop pt-space-2xl pb-space-xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter-desktop">
           <div className="flex flex-col gap-space-sm">
             <div className="flex items-center gap-space-sm mb-space-xs">
               <img
@@ -63,39 +63,12 @@ export function Footer() {
           </div>
           <div className="flex flex-col gap-space-xs">
             <h4 className="font-headline-sm text-headline-sm text-on-surface mb-space-xs">
-              Delivery Options
-            </h4>
-            <ul className="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
-              <li className="flex items-start gap-space-xs">
-                <span className="material-symbols-outlined text-primary text-base mt-0.5">
-                  local_shipping
-                </span>
-                <span>Knutsford Express islandwide to any depot station</span>
-              </li>
-              <li className="flex items-start gap-space-xs">
-                <span className="material-symbols-outlined text-primary text-base mt-0.5">
-                  mail
-                </span>
-                <span>
-                  ZipMail Jamaica Post counter pickup (all 14 parishes)
-                </span>
-              </li>
-              <li className="flex items-start gap-space-xs">
-                <span className="material-symbols-outlined text-primary text-base mt-0.5">
-                  location_on
-                </span>
-                <span>Kingston 10 scheduled direct storefront meetup</span>
-              </li>
-            </ul>
-          </div>
-          <div className="flex flex-col gap-space-xs">
-            <h4 className="font-headline-sm text-headline-sm text-on-surface mb-space-xs">
               Contact &amp; Social
             </h4>
             <ul className="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
               <li className="flex items-center gap-space-xs">
-                <span className="material-symbols-outlined text-primary text-base">
-                  chat
+                <span className="text-primary text-base">
+                  <i className="fa-brands fa-whatsapp" aria-hidden="true"></i>
                 </span>
                 <a
                   className="hover:text-primary transition-colors"
@@ -105,22 +78,22 @@ export function Footer() {
                 </a>
               </li>
               <li className="flex items-center gap-space-xs">
-                <span className="material-symbols-outlined text-primary text-base">
-                  photo_camera
+                <span className="text-primary text-base">
+                  <i className="fa-brands fa-instagram"></i>
                 </span>
                 <a className="hover:text-primary transition-colors" href="#">
                   @brandteesnmore (Instagram)
                 </a>
               </li>
               <li className="flex items-center gap-space-xs">
-                <span className="material-symbols-outlined text-primary text-base">
-                  call
+                <span className="text-primary text-base">
+                  <i className="fa-solid fa-phone"></i>
                 </span>
                 <span>Direct: +1 (876) 555-8337</span>
               </li>
               <li className="flex items-center gap-space-xs">
-                <span className="material-symbols-outlined text-primary text-base">
-                  alternate_email
+                <span className="text-primary text-base">
+                  <i className="fa-regular fa-envelope"></i>
                 </span>
                 <span>orders@brandteesnmore.jm</span>
               </li>
