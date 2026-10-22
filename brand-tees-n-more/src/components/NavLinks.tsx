@@ -2,52 +2,38 @@ import Logo from "../assets/davine-website-logo.jpg";
 
 export function NavLinks() {
   return (
-    <>
-      <div className="flex items-center gap-space-md shrink-0">
+    <div className="flex w-full flex-wrap items-center justify-between gap-x-gutter-desktop gap-y-space-sm xl:flex-nowrap">
+      <div className="flex items-center gap-space-sm sm:gap-space-md shrink-0">
         <img
           alt="Brand Tees n more Logo"
-          className="w-16 h-16 rounded-full object-cover shadow-sm"
+          className="w-10 h-10 sm:w-16 sm:h-16 rounded-full object-cover shadow-sm"
           src={Logo}
         />
         <div className="flex flex-col">
-          <span className="font-title-lg text-title-lg text-on-surface leading-tight tracking-tight">
+          <span className="font-title-lg text-base sm:text-title-lg text-on-surface leading-tight">
             Brand Tees n more
           </span>
-          <span className="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">
+          <span className="hidden sm:block font-label-sm text-label-sm text-primary font-bold uppercase">
             Good Fabric, Great Feeling
           </span>
         </div>
       </div>
-      <nav
-        className="hidden xl:flex items-center gap-space-sm shrink-0"
-        data-active-classNamees="bg-primary-container text-on-primary-container font-semibold rounded-full px-space-2xl py-space-xs shadow-sm"
-      >
+      <div className="order-3 w-full xl:order-none xl:flex-1 xl:max-w-[560px] xl:mx-space-md">
+        <div className="relative min-w-0 flex-1">
+          <span className="absolute left-space-md top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">
+            <i className="fa-solid fa-magnifying-glass"></i>
+          </span>
+          <input
+            aria-label="Search products"
+            className="w-full pl-11 pr-space-md py-space-sm bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-full shadow-sm outline-none focus:ring-2 focus:ring-primary transition-shadow"
+            placeholder="Search brand, style, size..."
+            type="text"
+          />
+        </div>
+      </div>
+      <div className="flex items-center gap-space-sm sm:gap-space-md shrink-0">
         <a
-          aria-current="page"
-          className="transition-colors bg-primary-container text-on-primary-container font-semibold rounded-full px-space-md py-space-xs shadow-sm whitespace-nowrap"
-          data-path="shirts"
-          href="#"
-        >
-          Shirts
-        </a>
-        <a
-          className="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-md py-space-xs rounded-full transition-colors whitespace-nowrap"
-          data-path="how-to-order"
-          href="#"
-        >
-          How to Order
-        </a>
-        <a
-          className="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-md py-space-xs rounded-full transition-colors whitespace-nowrap"
-          data-path="more-info"
-          href="#"
-        >
-          More Info
-        </a>
-      </nav>
-      <div className="flex items-center gap-space-md shrink-0">
-        <a
-          className="hidden sm:inline-flex items-center gap-space-xs bg-[#25D366] text-white px-space-md py-space-sm rounded-full font-label-md text-label-md shadow-sm hover:opacity-95 transition-all"
+          className="hidden lg:inline-flex items-center gap-space-xs bg-[#25D366] text-white px-space-md py-space-sm rounded-full font-label-md text-label-md shadow-sm hover:opacity-95 transition-all"
           href="https://wa.me/18765558337"
           rel="noopener noreferrer"
           target="_blank"
@@ -59,18 +45,18 @@ export function NavLinks() {
         </a>
 
         <button
-          className="inline-flex items-center gap-space-xs bg-on-surface text-surface-container-lowest px-space-md py-space-sm rounded-full font-label-md text-label-md hover:bg-on-surface/90 transition-all"
+          className="inline-flex items-center gap-space-xs bg-on-surface text-surface-container-lowest px-space-sm sm:px-space-md py-space-sm rounded-full font-label-md text-label-md hover:bg-on-surface/90 transition-all"
           type="button"
         >
           <span className="text-base">
             <i className="fa-solid fa-cart-shopping"></i>
           </span>
-          <span>Cart</span>
+          <span className="hidden sm:inline">Cart</span>
           <span className="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-space-xs py-0.5 rounded-full">
             2
           </span>
         </button>
       </div>
-    </>
+    </div>
   );
 }

@@ -1,10 +1,14 @@
 import { ActiveFilters } from "./ActiveFilters";
 
-export function MainProductArea() {
+type MainProductAreaProps = {
+  onOpenFilters: () => void;
+};
+
+export function MainProductArea({ onOpenFilters }: MainProductAreaProps) {
   return (
-    <div className="flex-1 min-w-0 flex flex-col gap-space-lg">
+    <div className="flex-1 min-w-0 flex flex-col gap-space-md lg:gap-space-lg">
       {/*Active Filters Chips Bar*/}
-      <ActiveFilters />
+      <ActiveFilters onOpenFilters={onOpenFilters} />
       {/*3-Column Desktop Product Catalog Grid*/}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-gutter-desktop">
         {/*Product Card 1: Nike*/}
