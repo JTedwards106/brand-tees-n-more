@@ -34,7 +34,7 @@ export function NavLinks() {
       <div className="flex items-center gap-space-sm sm:gap-space-md shrink-0">
         <a
           className="hidden lg:inline-flex items-center gap-space-xs bg-[#25D366] text-white px-space-md py-space-sm rounded-full font-label-md text-label-md shadow-sm hover:opacity-95 transition-all"
-          href="https://wa.me/18765558337"
+          href="https://wa.me/18768525966"
           rel="noopener noreferrer"
           target="_blank"
         >

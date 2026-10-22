@@ -156,7 +156,9 @@ export function MainProductArea({ onOpenFilters }: MainProductAreaProps) {
                 className="w-full py-space-sm px-space-md rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-semibold cursor-not-allowed flex items-center justify-center gap-space-xs"
                 disabled
               >
-                <span className="material-symbols-outlined text-lg">block</span>
+                <span className="text-lg">
+                  <i className="fa-solid fa-ban"></i>
+                </span>
                 <span>Sold Out</span>
               </button>
             </div>

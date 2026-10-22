@@ -1,0 +1,1383 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Rubik:wght@600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#865300",
+              "on-tertiary-fixed-variant": "#693c00",
+              "surface-dim": "#ccdbf4",
+              "inverse-surface": "#233144",
+              "surface-tint": "#865300",
+              "on-background": "#0d1c2f",
+              tertiary: "#8a5100",
+              "on-tertiary": "#ffffff",
+              outline: "#867462",
+              "outline-variant": "#d8c3ae",
+              background: "#f8f9ff",
+              secondary: "#525e7d",
+              "inverse-on-surface": "#ebf1ff",
+              "primary-fixed-dim": "#ffb961",
+              "tertiary-container": "#fd9f2a",
+              "on-primary-container": "#653d00",
+              "secondary-fixed-dim": "#b9c6ea",
+              "surface-container": "#e6eeff",
+              "surface-container-low": "#eff4ff",
+              "on-surface-variant": "#534434",
+              "on-primary": "#ffffff",
+              "surface-bright": "#f8f9ff",
+              "surface-variant": "#d5e3fd",
+              "inverse-primary": "#ffb961",
+              "on-primary-fixed": "#2b1700",
+              "on-secondary-fixed-variant": "#3a4664",
+              "on-tertiary-container": "#683c00",
+              "on-surface": "#0d1c2f",
+              "on-tertiary-fixed": "#2c1600",
+              error: "#ba1a1a",
+              "tertiary-fixed": "#ffdcbd",
+              "on-error": "#ffffff",
+              "surface-container-high": "#dde9ff",
+              "on-secondary-container": "#525f7e",
+              "error-container": "#ffdad6",
+              "primary-fixed": "#ffddb9",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed": "#0d1b36",
+              "on-secondary": "#ffffff",
+              surface: "#f8f9ff",
+              "surface-container-highest": "#d5e3fd",
+              "on-primary-fixed-variant": "#663e00",
+              "secondary-container": "#cdd9fe",
+              "tertiary-fixed-dim": "#ffb86e",
+              "on-error-container": "#93000a",
+              "secondary-fixed": "#d9e2ff",
+              "primary-container": "#f9a11b",
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "2rem",
+              xl: "3rem",
+              full: "9999px",
+            },
+            spacing: {
+              "margin-desktop": "2.5rem",
+              "space-lg": "1.5rem",
+              "space-md": "1rem",
+              margin: "1.25rem",
+              "space-2xl": "3rem",
+              gutter: "1rem",
+              "gutter-desktop": "1.5rem",
+              "space-sm": "0.5rem",
+              "space-xs": "0.25rem",
+              "space-xl": "2rem",
+            },
+            fontFamily: {
+              "headline-lg": ["Rubik"],
+              "headline-sm": ["Rubik"],
+              "headline-md": ["Rubik"],
+              "title-lg": ["Rubik"],
+              "display-lg-mobile": ["Rubik"],
+              "price-tag": ["Rubik"],
+              "label-sm": ["Plus Jakarta Sans"],
+              "body-lg": ["Plus Jakarta Sans"],
+              "body-sm": ["Plus Jakarta Sans"],
+              "label-lg": ["Plus Jakarta Sans"],
+              "headline-lg-mobile": ["Rubik"],
+              "label-md": ["Plus Jakarta Sans"],
+              "display-lg": ["Rubik"],
+              "body-md": ["Plus Jakarta Sans"],
+            },
+            fontSize: {
+              "headline-lg": [
+                "32px",
+                { lineHeight: "40px", fontWeight: "600" },
+              ],
+              "headline-sm": [
+                "20px",
+                { lineHeight: "26px", fontWeight: "600" },
+              ],
+              "headline-md": [
+                "24px",
+                { lineHeight: "30px", fontWeight: "600" },
+              ],
+              "title-lg": ["18px", { lineHeight: "24px", fontWeight: "600" }],
+              "display-lg-mobile": [
+                "32px",
+                {
+                  lineHeight: "38px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "700",
+                },
+              ],
+              "price-tag": ["22px", { lineHeight: "28px", fontWeight: "700" }],
+              "label-sm": [
+                "11px",
+                {
+                  lineHeight: "14px",
+                  letterSpacing: "0.04em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-lg": ["17px", { lineHeight: "26px", fontWeight: "400" }],
+              "body-sm": ["13px", { lineHeight: "18px", fontWeight: "400" }],
+              "label-lg": [
+                "15px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-lg-mobile": [
+                "26px",
+                { lineHeight: "32px", fontWeight: "600" },
+              ],
+              "label-md": [
+                "13px",
+                {
+                  lineHeight: "18px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "600",
+                },
+              ],
+              "display-lg": [
+                "44px",
+                {
+                  lineHeight: "52px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-md": ["15px", { lineHeight: "22px", fontWeight: "400" }],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-surface font-body-md text-on-surface antialiased">
+    <header
+      class="fixed top-0 w-full z-50 bg-[#FFF8E7]/95 backdrop-blur-md border-b border-primary-container/40 shadow-[0_4px_20px_rgba(134,83,0,0.06)]"
+    >
+      <div
+        class="h-20 max-w-[1200px] mx-auto px-margin-desktop flex items-center justify-between gap-gutter-desktop"
+      >
+        <div class="flex items-center gap-space-md shrink-0">
+          <img
+            alt="Brand Tees n more Logo"
+            class="w-11 h-11 rounded-full object-cover shadow-sm"
+            src="https://lh3.googleusercontent.com/aida/AEtjO1VeXqDFF0io2h3gXtxXJsf3OW0-Z2L1k2CVjapkgofGVpzfVCMLeEDSpebgNKPr_hIWLcxu9FnKOU4N6Qa7GcdvS1t0E6U2dzQA-kszVjzyxKja7KbWT9K2yRaZQBGmRjf1kAvbzbl7AtDic2mYm6uUkWEwrwWybhD16DRhNXcqEHKIOm0vV6mz9qd3iTPtA119e9uwAC2OCDjXM-79MfE6yjwfPHibCuhNzld4QNrMRUE7933fc8SqHqxl1Fv0bwYwKEMKZyaCAQ"
+          />
+          <div class="flex flex-col">
+            <span
+              class="font-title-lg text-title-lg text-on-surface leading-tight tracking-tight"
+              >Brand Tees n more</span
+            ><span
+              class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider"
+              >Good Fabric, Great Feeling</span
+            >
+          </div>
+        </div>
+        <nav
+          class="hidden xl:flex items-center gap-space-sm"
+          data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-full px-space-md py-space-xs shadow-sm"
+        >
+          <a
+            class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-md py-space-xs rounded-full transition-colors"
+            data-path="home"
+            href="#"
+            >Home</a
+          ><a
+            aria-current="page"
+            class="transition-colors bg-primary-container text-on-primary-container font-semibold rounded-full px-space-md py-space-xs shadow-sm"
+            data-path="shop-tees"
+            href="#"
+            >Shop Tees</a
+          ><a
+            class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-md py-space-xs rounded-full transition-colors"
+            data-path="how-to-order"
+            href="#"
+            >How to Order</a
+          ><a
+            class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-md py-space-xs rounded-full transition-colors"
+            data-path="lookbook"
+            href="#"
+            >Lookbook</a
+          ><a
+            class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-md py-space-xs rounded-full transition-colors"
+            data-path="delivery-parishes"
+            href="#"
+            >Delivery &amp; Parishes</a
+          ><a
+            class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-md py-space-xs rounded-full transition-colors"
+            data-path="about"
+            href="#"
+            >About</a
+          >
+        </nav>
+        <div class="flex items-center gap-space-md shrink-0">
+          <a
+            class="hidden sm:inline-flex items-center gap-space-xs bg-[#25D366] text-white px-space-md py-space-sm rounded-full font-label-md text-label-md shadow-sm hover:opacity-95 transition-all"
+            href="https://wa.me/18765558337"
+            rel="noopener noreferrer"
+            target="_blank"
+            ><span class="material-symbols-outlined text-lg leading-none"
+              >chat</span
+            ><span>Chat on WhatsApp +1 876 555-8337</span></a
+          ><button
+            class="inline-flex items-center gap-space-xs bg-on-surface text-surface-container-lowest px-space-md py-space-sm rounded-full font-label-md text-label-md hover:bg-on-surface/90 transition-all"
+            type="button"
+          >
+            <span class="material-symbols-outlined text-base">shopping_bag</span
+            ><span>Bag</span
+            ><span
+              class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-space-xs py-0.5 rounded-full"
+              >2</span
+            ></button
+          ><img
+            alt="Profile"
+            class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/60"
+            src="https://lh3.googleusercontent.com/aida/AEtjO1VeXqDFF0io2h3gXtxXJsf3OW0-Z2L1k2CVjapkgofGVpzfVCMLeEDSpebgNKPr_hIWLcxu9FnKOU4N6Qa7GcdvS1t0E6U2dzQA-kszVjzyxKja7KbWT9K2yRaZQBGmRjf1kAvbzbl7AtDic2mYm6uUkWEwrwWybhD16DRhNXcqEHKIOm0vV6mz9qd3iTPtA119e9uwAC2OCDjXM-79MfE6yjwfPHibCuhNzld4QNrMRUE7933fc8SqHqxl1Fv0bwYwKEMKZyaCAQ"
+          />
+        </div>
+      </div>
+    </header>
+    <main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]">
+      <div class="flex flex-col w-full">
+        <!-- Subtle decorative ambient glow behind product area -->
+        <div
+          class="relative w-full max-w-[1240px] mx-auto px-margin-desktop pt-space-md pb-space-2xl"
+        >
+          <!-- Breadcrumbs Component -->
+          <nav
+            aria-label="Breadcrumb"
+            class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface-variant mb-space-lg"
+          >
+            <a
+              class="hover:text-primary transition-colors"
+              data-path="home"
+              href="#"
+              >Home</a
+            >
+            <span
+              class="material-symbols-outlined text-sm select-none opacity-40"
+              >chevron_right</span
+            >
+            <a
+              class="hover:text-primary transition-colors"
+              data-path="shop-tees"
+              href="#"
+              >Shop Tees</a
+            >
+            <span
+              class="material-symbols-outlined text-sm select-none opacity-40"
+              >chevron_right</span
+            >
+            <span class="text-on-surface-variant font-medium">Nike</span>
+            <span
+              class="material-symbols-outlined text-sm select-none opacity-40"
+              >chevron_right</span
+            >
+            <span class="text-on-surface font-semibold truncate max-w-[280px]"
+              >Retro Club Essential Tee</span
+            >
+          </nav>
+          <!-- Main Product Grid: 55% Gallery / 45% Buy Box -->
+          <div class="grid grid-cols-12 gap-gutter-desktop items-start">
+            <!-- LEFT COLUMN: Image Showcase & Real Visual Assets (approx 55% width -> 7 cols) -->
+            <section
+              class="col-span-12 lg:col-span-7 flex flex-col gap-space-lg"
+            >
+              <!-- Large Main Showcase Image Frame -->
+              <div
+                class="relative w-full aspect-square bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden group"
+              >
+                <img
+                  alt="Nike Retro Club Essential Tee Forest Green Front"
+                  class="w-full h-full object-cover object-center transition-all duration-300 transform group-hover:scale-[1.02]"
+                  data-alt="Editorial product photograph of an authentic forest green heavyweight boxy streetwear t-shirt displayed flat on clean warm stone backdrop, featuring crisp clean white chest embroidery, premium textured 240 GSM cotton weave, studio warm golden lighting, sun-drenched aesthetic, high resolution commercial look"
+                  id="mainProductDisplay"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSZ9QrzmRW_2BEVlAy7Xv_5M_XX2E0UonUx8Tc9QoLjqYiN9PM5esNYQGfpapmRsifAWU8lAtkVbH5kApRxOs__HmMJ9C7DUxU78lwgP3NE-OLBhyYUKMmzkjzH6Y5Pf4cGJ_v_XxdTbmcG1Yw9toWr3osdkIWnlYKVS7cyrGP2UunL99Yg57FwlLdgHi9B-yEYrvCqSqChJdVdPK1aomTFbIYNN6ZutLnV8daqu8XWskvyyOPoxrAXw"
+                />
+                <!-- Floating Status Pills over display -->
+                <div
+                  class="absolute top-space-md left-space-md flex flex-wrap gap-space-xs"
+                >
+                  <span
+                    class="bg-inverse-surface/85 backdrop-blur-md text-inverse-on-surface font-label-sm text-label-sm px-space-md py-space-xs rounded-full shadow-sm tracking-wider uppercase"
+                  >
+                    Kingston Local Stock
+                  </span>
+                  <span
+                    class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-space-md py-space-xs rounded-full font-bold shadow-sm"
+                  >
+                    240 GSM Heavyweight
+                  </span>
+                </div>
+                <!-- Zoom hint chip -->
+                <div
+                  class="absolute bottom-space-md right-space-md bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm px-space-sm py-space-xs rounded-full flex items-center gap-space-xs shadow-sm opacity-90"
+                >
+                  <span class="material-symbols-outlined text-base"
+                    >zoom_in</span
+                  >
+                  <span>Hover to inspect weave</span>
+                </div>
+              </div>
+              <!-- Thumbnail Gallery Strip -->
+              <div class="grid grid-cols-4 gap-space-sm" id="thumbTrack">
+                <!-- Thumb 1 -->
+                <button
+                  class="thumb-btn active-thumb relative aspect-square rounded-DEFAULT overflow-hidden bg-surface-container-lowest shadow-sm transition-all duration-200 transform hover:-translate-y-0.5 ring-2 ring-primary"
+                  onclick="
+                    updateGallery(
+                      this,
+                      'Editorial product photograph of an authentic forest green heavyweight boxy streetwear t-shirt displayed flat on clean warm stone backdrop, featuring crisp clean white chest embroidery, premium textured 240 GSM cotton weave, studio warm golden lighting, sun-drenched aesthetic, high resolution commercial look',
+                    )
+                  "
+                  type="button"
+                >
+                  <img
+                    alt="Front Graphic"
+                    class="w-full h-full object-cover pointer-events-none"
+                    data-alt="Front flat-lay view of forest green heavyweight cotton streetwear t-shirt on warm cream pedestal, clean neckline and sharp hem, warm studio lighting"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkC0HfOVvgvpUqPqIbspZ6CDScJAYFe4O6yJ7orFJJzwbcKvuRU2fX2meLJpoAnP-r7x-JuvicLWsxC3Vf-S-FflgyU8bRlIT3z2UZtDLm2BanppTzUp1wcFOr6DbXjzpbCFtIERM3ipdOs2E7Md_ZFsBcWjEv6SERIwWOSMVMmm4TZRQd4PnbiR0sPTd0R87OmSBYkjKSfAn41s3db1ICOgAxzpHhhRujHp8DdIE6XnhjnbmzkXAZmw"
+                  />
+                  <span
+                    class="absolute bottom-1 left-1 right-1 text-center bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-[10px] py-0.5 rounded-full backdrop-blur-xs"
+                    >Front Fit</span
+                  >
+                </button>
+                <!-- Thumb 2 -->
+                <button
+                  class="thumb-btn relative aspect-square rounded-DEFAULT overflow-hidden bg-surface-container-lowest shadow-sm transition-all duration-200 transform hover:-translate-y-0.5 opacity-80 hover:opacity-100"
+                  onclick="
+                    updateGallery(
+                      this,
+                      'Full back fit view of a male model wearing relaxed forest green heavyweight streetwear tee against textured Kingston concrete wall, natural sunlight, drop shoulder silhouette, relaxed drape',
+                    )
+                  "
+                  type="button"
+                >
+                  <img
+                    alt="Streetwear Back Drape"
+                    class="w-full h-full object-cover pointer-events-none"
+                    data-alt="Back streetwear silhouette of a model wearing an oversized forest green cotton t-shirt with loose drape and drop shoulder styling in bright sun"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcYE92AgK7wqik6bEphumoCSYBrNhAzAw_fK5ZWRLCA7cSfGalkZgaSeaxdZqdw-_CzJIZaVqAxHEU8wtBo26B2Y2HgN4O55sPpMA6juGXTQng5hNHDBWeVH1bJA7-thdrS8W2voVbOGq3bWE5vlcKuoE0pdVMEmJwpFzy4XgyS3SsdgYPkq6f83WQVrB5Me2dGLYm3sCFSnuWEwsMfrLL9jlNCPDP-dWp1h5EiFOwtq2zDDKf3fIiMw"
+                  />
+                  <span
+                    class="absolute bottom-1 left-1 right-1 text-center bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-[10px] py-0.5 rounded-full backdrop-blur-xs"
+                    >Back Drop</span
+                  >
+                </button>
+                <!-- Thumb 3 -->
+                <button
+                  class="thumb-btn relative aspect-square rounded-DEFAULT overflow-hidden bg-surface-container-lowest shadow-sm transition-all duration-200 transform hover:-translate-y-0.5 opacity-80 hover:opacity-100"
+                  onclick="
+                    updateGallery(
+                      this,
+                      'Extreme macro close up of 240 GSM heavy combed cotton fabric weave in rich forest green, showing sturdy 1-inch ribbed collar stitch detail, durable raw texture, warm ambient studio lighting',
+                    )
+                  "
+                  type="button"
+                >
+                  <img
+                    alt="Fabric Weave Detail"
+                    class="w-full h-full object-cover pointer-events-none"
+                    data-alt="Macro close-up shot of dense forest green cotton ribbed neckline stitch and thick 240 GSM textured fabric threads"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrX4b29_mh-4_cYG45ploN4xe7u7d9fC0nPnkJ-mUzv8LUxGcv1PvD54mI6GHLNiL181cG6Qohe8r2ywAG0Yl8x8R8R-jriLFBNbqi_Q9kaltDDJVz6_Q9-X0E1BQM0gg0mTmj9aPWx9REZiedPlT17E9e0yLXlhf7ug8SZ-5VM4JbzAEH6zqe7xerP8GAuo8K9xvWFzZnU9KhzD9-nnHCv-yQk7419rJdRRVrNENrSufJVHXQefc2DQ"
+                  />
+                  <span
+                    class="absolute bottom-1 left-1 right-1 text-center bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-[10px] py-0.5 rounded-full backdrop-blur-xs"
+                    >240 GSM</span
+                  >
+                </button>
+                <!-- Thumb 4 -->
+                <button
+                  class="thumb-btn relative aspect-square rounded-DEFAULT overflow-hidden bg-surface-container-lowest shadow-sm transition-all duration-200 transform hover:-translate-y-0.5 opacity-80 hover:opacity-100"
+                  onclick="
+                    updateGallery(
+                      this,
+                      'Sunlit lifestyle photo of Caribbean streetwear enthusiast wearing forest green graphic tee paired with casual cargos walking down lively Kingston boulevard with tropical greenery and blue sky',
+                    )
+                  "
+                  type="button"
+                >
+                  <img
+                    alt="Kingston Street Lifestyle"
+                    class="w-full h-full object-cover pointer-events-none"
+                    data-alt="Street lifestyle photo in Kingston Jamaica of person wearing relaxed forest green sports tee against blue sky and tropical foliage"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtJSFFRSV2PvlxY87XxWN3PnxxwgEdvNmrABBvKR1wpSni94-esvzfPPV4jCm5Sd9zSc-WU08_mjR4g1X2UtllIa3sqmbOhjaz-SDNx0FInmtd1x2XBgmKSY5_Aota-_9AyWRzg9fqj7Zzb5Q0On9fj5VFTyByYXZnYWouOrLTDKteIpV1yiXkl3dnUqOqenAPKtmYymllz6yl4Nb8OUSR0pVIPDIyUuW_RcBDmdtYFOIrCGlx-dmUMw"
+                  />
+                  <span
+                    class="absolute bottom-1 left-1 right-1 text-center bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-[10px] py-0.5 rounded-full backdrop-blur-xs"
+                    >Street Fit</span
+                  >
+                </button>
+              </div>
+              <!-- Trust Badges Strip -->
+              <div class="grid grid-cols-3 gap-space-sm pt-space-xs">
+                <div
+                  class="flex items-center gap-space-xs p-space-sm rounded-DEFAULT bg-surface-container-low shadow-sm"
+                >
+                  <span class="material-symbols-outlined text-primary text-xl"
+                    >verified</span
+                  >
+                  <div class="flex flex-col min-w-0">
+                    <span
+                      class="font-label-md text-label-md text-on-surface font-bold truncate"
+                      >100% Authentic</span
+                    >
+                    <span
+                      class="font-body-sm text-[11px] text-on-surface-variant truncate"
+                      >Original club release</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-space-xs p-space-sm rounded-DEFAULT bg-surface-container-low shadow-sm"
+                >
+                  <span class="material-symbols-outlined text-primary text-xl"
+                    >fact_check</span
+                  >
+                  <div class="flex flex-col min-w-0">
+                    <span
+                      class="font-label-md text-label-md text-on-surface font-bold truncate"
+                      >Hand-Inspected</span
+                    >
+                    <span
+                      class="font-body-sm text-[11px] text-on-surface-variant truncate"
+                      >Vetted in Kingston</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-space-xs p-space-sm rounded-DEFAULT bg-surface-container-low shadow-sm"
+                >
+                  <span class="material-symbols-outlined text-[#25D366] text-xl"
+                    >chat</span
+                  >
+                  <div class="flex flex-col min-w-0">
+                    <span
+                      class="font-label-md text-label-md text-on-surface font-bold truncate"
+                      >Dave on WhatsApp</span
+                    >
+                    <span
+                      class="font-body-sm text-[11px] text-on-surface-variant truncate"
+                      >Fast answers &amp; sizes</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- RIGHT COLUMN: Buy Box & Direct Social Commerce (approx 45% width -> 5 cols) -->
+            <section
+              class="col-span-12 lg:col-span-5 flex flex-col gap-space-md"
+            >
+              <!-- Product Header Card -->
+              <div
+                class="bg-surface-container-lowest p-space-lg rounded-lg shadow-sm flex flex-col gap-space-sm"
+              >
+                <!-- Brand Badge and Meta -->
+                <div class="flex items-center justify-between">
+                  <!-- Plain text brand name NIKE uppercase badge, not trademark logo -->
+                  <span
+                    class="inline-flex items-center bg-inverse-surface text-inverse-on-surface font-label-md text-label-md font-bold tracking-widest px-space-md py-1 rounded-full uppercase"
+                  >
+                    NIKE
+                  </span>
+                  <span
+                    class="font-label-sm text-label-sm text-on-surface-variant"
+                  >
+                    SKU: BTNM-NK-0824
+                  </span>
+                </div>
+                <!-- Product Title in bold display -->
+                <h1
+                  class="font-headline-lg text-headline-lg text-inverse-surface tracking-tight leading-tight mt-space-xs"
+                >
+                  Retro Club Essential Tee
+                </h1>
+                <!-- Price Display with Local Currency Context -->
+                <div class="flex items-baseline gap-space-sm pt-space-xs">
+                  <span
+                    class="font-display-lg text-[32px] text-primary font-bold tracking-tight"
+                  >
+                    $5,200 JMD
+                  </span>
+                  <span
+                    class="font-body-sm text-body-sm text-on-surface-variant"
+                  >
+                    • Fair JMD pricing • No hidden fees
+                  </span>
+                </div>
+                <!-- Real-time Availability in Kingston -->
+                <div
+                  class="inline-flex items-center gap-space-xs bg-[#FFF8E7] px-space-sm py-space-xs rounded-full w-fit"
+                >
+                  <span
+                    class="w-2.5 h-2.5 rounded-full bg-[#25D366] animate-pulse"
+                  ></span>
+                  <span
+                    class="font-label-md text-label-md text-on-surface font-semibold"
+                  >
+                    4 in stock in Kingston
+                  </span>
+                  <span
+                    class="font-body-sm text-body-sm text-on-surface-variant"
+                  >
+                    (Holds reserved upon request)
+                  </span>
+                </div>
+                <!-- Description paragraph -->
+                <p
+                  class="font-body-md text-body-md text-on-surface-variant leading-relaxed pt-space-xs"
+                >
+                  100% heavyweight combed cotton (240 GSM). Features a relaxed
+                  streetwear boxy cut with sturdy 1-inch ribbed collar.
+                  Pre-shrunk and built to last in Jamaica's warm climate.
+                </p>
+                <hr
+                  class="border-t-0 bg-outline-variant/30 h-[1px] my-space-xs"
+                />
+                <!-- Size Selector Area -->
+                <div class="flex flex-col gap-space-xs">
+                  <div class="flex items-center justify-between">
+                    <span
+                      class="font-title-lg text-title-lg text-on-surface font-semibold"
+                      >Select Size</span
+                    >
+                    <button
+                      class="font-label-sm text-label-sm text-primary hover:underline flex items-center gap-1 font-semibold"
+                      onclick="openSizeModal()"
+                      type="button"
+                    >
+                      <span class="material-symbols-outlined text-base"
+                        >straighten</span
+                      >
+                      <span>Size Guide &amp; Fit Advice</span>
+                    </button>
+                  </div>
+                  <!-- Size Choice Chips -->
+                  <div
+                    class="grid grid-cols-5 gap-space-xs pt-space-xs"
+                    id="sizeSelectorGroup"
+                  >
+                    <!-- S -->
+                    <button
+                      class="size-pill group flex flex-col items-center justify-center min-h-[52px] rounded-DEFAULT bg-surface-container-low text-on-surface font-label-md text-label-md font-semibold transition-all hover:bg-surface-container"
+                      data-size="S"
+                      onclick="selectSize(this)"
+                      type="button"
+                    >
+                      <span>S</span>
+                      <span class="font-label-sm text-[10px] text-primary"
+                        >1 left</span
+                      >
+                    </button>
+                    <!-- M Selected by default -->
+                    <button
+                      class="size-pill active-size-pill group flex flex-col items-center justify-center min-h-[52px] rounded-DEFAULT bg-inverse-surface text-inverse-on-surface font-label-md text-label-md font-bold shadow-md transition-all"
+                      data-size="M"
+                      onclick="selectSize(this)"
+                      type="button"
+                    >
+                      <span>M</span>
+                      <span
+                        class="font-label-sm text-[10px] text-primary-fixed-dim"
+                        >Selected</span
+                      >
+                    </button>
+                    <!-- L -->
+                    <button
+                      class="size-pill group flex flex-col items-center justify-center min-h-[52px] rounded-DEFAULT bg-surface-container-low text-on-surface font-label-md text-label-md font-semibold transition-all hover:bg-surface-container"
+                      data-size="L"
+                      onclick="selectSize(this)"
+                      type="button"
+                    >
+                      <span>L</span>
+                      <span class="font-label-sm text-[10px] text-primary"
+                        >2 left</span
+                      >
+                    </button>
+                    <!-- XL (Sold out) -->
+                    <button
+                      class="size-pill flex flex-col items-center justify-center min-h-[52px] rounded-DEFAULT bg-surface-container text-on-surface-variant/40 font-label-md text-label-md line-through cursor-not-allowed select-none"
+                      disabled=""
+                      type="button"
+                    >
+                      <span>XL</span>
+                      <span class="font-label-sm text-[10px] no-underline"
+                        >Sold Out</span
+                      >
+                    </button>
+                    <!-- XXL (Sold out) -->
+                    <button
+                      class="size-pill flex flex-col items-center justify-center min-h-[52px] rounded-DEFAULT bg-surface-container text-on-surface-variant/40 font-label-md text-label-md line-through cursor-not-allowed select-none"
+                      disabled=""
+                      type="button"
+                    >
+                      <span>XXL</span>
+                      <span class="font-label-sm text-[10px] no-underline"
+                        >Sold Out</span
+                      >
+                    </button>
+                  </div>
+                  <!-- Fit Tip Card -->
+                  <div
+                    class="mt-space-xs p-space-sm rounded-DEFAULT bg-surface-container-low flex items-start gap-space-xs"
+                  >
+                    <span
+                      class="material-symbols-outlined text-primary text-lg mt-0.5"
+                      >stylus</span
+                    >
+                    <p
+                      class="font-body-sm text-body-sm text-on-surface-variant leading-snug"
+                    >
+                      <span class="font-semibold text-on-surface"
+                        >Dave's fit tip:</span
+                      >
+                      Fits true to standard US streetwear sizing. If you prefer
+                      an oversized boxy drop-shoulder look, go one size up.
+                    </p>
+                  </div>
+                </div>
+                <!-- Quantity Stepper & Add to Cart -->
+                <div class="flex items-center gap-space-sm pt-space-xs">
+                  <!-- Stepper Container -->
+                  <div
+                    class="flex items-center bg-surface-container-low rounded-DEFAULT px-space-xs py-1 shadow-sm shrink-0"
+                  >
+                    <button
+                      aria-label="Decrease quantity"
+                      class="w-10 h-10 flex items-center justify-center rounded-DEFAULT text-on-surface hover:bg-surface-container transition-colors font-bold text-lg"
+                      onclick="changeQty(-1)"
+                      type="button"
+                    >
+                      −
+                    </button>
+                    <span
+                      class="w-10 text-center font-headline-sm text-headline-sm text-on-surface font-bold select-none"
+                      id="qtyCounter"
+                    >
+                      1
+                    </span>
+                    <button
+                      aria-label="Increase quantity"
+                      class="w-10 h-10 flex items-center justify-center rounded-DEFAULT text-on-surface hover:bg-surface-container transition-colors font-bold text-lg"
+                      onclick="changeQty(1)"
+                      type="button"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <!-- Prominent Primary Action: Add to Cart (Warm Amber #F9A11B style) -->
+                  <button
+                    class="flex-1 min-h-[54px] bg-primary-container text-on-primary-container hover:bg-primary-fixed-dim font-headline-sm text-headline-sm rounded-lg flex items-center justify-center gap-space-sm shadow-md transition-all active:scale-[0.98]"
+                    id="addToBagBtn"
+                    onclick="triggerAddToCart()"
+                    type="button"
+                  >
+                    <span class="material-symbols-outlined text-2xl"
+                      >shopping_bag</span
+                    >
+                    <span>Add to cart</span>
+                  </button>
+                </div>
+                <!-- Reassurance Banner: Request-to-Order Model (Strictly no online payment) -->
+                <div
+                  class="mt-space-xs p-space-md rounded-DEFAULT bg-[#FFF8E7] flex items-start gap-space-sm"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary text-2xl shrink-0 mt-0.5"
+                    >lightbulb</span
+                  >
+                  <div class="flex flex-col gap-1">
+                    <span
+                      class="font-label-md text-label-md font-bold text-on-surface"
+                    >
+                      How ordering works at Brand Tees n more:
+                    </span>
+                    <p
+                      class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                    >
+                      There is no payment taken on this website. When you submit
+                      your cart, you send an order request directly to Dave.
+                      <span class="font-semibold text-on-surface"
+                        >Availability is confirmed when I contact you</span
+                      >
+                      on WhatsApp, where we arrange pickup in Kingston or
+                      Knutsford courier delivery.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Fulfillment Options Information Accordion/Card -->
+              <div
+                class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-space-sm"
+              >
+                <div class="flex items-center gap-space-xs">
+                  <span class="material-symbols-outlined text-primary text-xl"
+                    >local_shipping</span
+                  >
+                  <h3 class="font-title-lg text-title-lg text-on-surface">
+                    Islandwide Fulfillment Options
+                  </h3>
+                </div>
+                <!-- Options Grid -->
+                <div class="flex flex-col gap-space-xs">
+                  <!-- Kingston Hub -->
+                  <div
+                    class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container-low hover:bg-surface-container transition-colors"
+                  >
+                    <div class="flex items-center gap-space-sm">
+                      <span class="material-symbols-outlined text-primary"
+                        >store</span
+                      >
+                      <div class="flex flex-col">
+                        <span
+                          class="font-label-md text-label-md font-bold text-on-surface"
+                          >Kingston 10 Hub Pickup</span
+                        >
+                        <span
+                          class="font-body-sm text-body-sm text-on-surface-variant"
+                          >Shop 4B Constant Spring Rd • Same-day meetup</span
+                        >
+                      </div>
+                    </div>
+                    <span
+                      class="font-label-sm text-label-sm text-primary font-bold bg-[#FFF8E7] px-space-sm py-1 rounded-full uppercase"
+                    >
+                      Free
+                    </span>
+                  </div>
+                  <!-- Knutsford Express -->
+                  <div
+                    class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container-low hover:bg-surface-container transition-colors"
+                  >
+                    <div class="flex items-center gap-space-sm">
+                      <span class="material-symbols-outlined text-primary"
+                        >directions_bus</span
+                      >
+                      <div class="flex flex-col">
+                        <span
+                          class="font-label-md text-label-md font-bold text-on-surface"
+                          >Knutsford Express</span
+                        >
+                        <span
+                          class="font-body-sm text-body-sm text-on-surface-variant"
+                          >Next-day station arrival islandwide</span
+                        >
+                      </div>
+                    </div>
+                    <span
+                      class="font-label-md text-label-md text-on-surface font-semibold"
+                    >
+                      ~$800 JMD
+                    </span>
+                  </div>
+                  <!-- ZipMail -->
+                  <div
+                    class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container-low hover:bg-surface-container transition-colors"
+                  >
+                    <div class="flex items-center gap-space-sm">
+                      <span class="material-symbols-outlined text-primary"
+                        >markunread_mailbox</span
+                      >
+                      <div class="flex flex-col">
+                        <span
+                          class="font-label-md text-label-md font-bold text-on-surface"
+                          >ZipMail (Jamaica Post)</span
+                        >
+                        <span
+                          class="font-body-sm text-body-sm text-on-surface-variant"
+                          >Budget post counter pickup in all 14 parishes</span
+                        >
+                      </div>
+                    </div>
+                    <span
+                      class="font-label-md text-label-md text-on-surface font-semibold"
+                    >
+                      ~$500 JMD
+                    </span>
+                  </div>
+                </div>
+                <!-- Direct Question Link to Dave via WhatsApp -->
+                <div class="mt-space-xs pt-space-xs text-center">
+                  <a
+                    class="inline-flex items-center justify-center gap-space-xs text-[#25D366] hover:text-[#1eb855] font-label-md text-label-md font-semibold py-1 transition-colors group"
+                    href="https://wa.me/18765558337?text=Hi%20Dave,%20I'm%20looking%20at%20the%20Nike%20Retro%20Club%20Essential%20Tee.%20Could%20you%20confirm%20measurements%20or%20hold%20a%20Medium%20for%20me?"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <span class="material-symbols-outlined text-lg">forum</span>
+                    <span class="group-hover:underline"
+                      >Have doubts about chest measurements? Message Dave on
+                      WhatsApp (+1 876 555-8337)</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </section>
+          </div>
+          <!-- Related Picks Section -->
+          <section class="mt-space-2xl pt-space-xl">
+            <div class="flex items-center justify-between mb-space-md">
+              <div>
+                <span
+                  class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider"
+                  >Matching Street Drops</span
+                >
+                <h2 class="font-headline-md text-headline-md text-on-surface">
+                  More Classic Heavyweight Tees in Kingston
+                </h2>
+              </div>
+              <a
+                class="font-label-md text-label-md text-primary font-semibold hover:underline flex items-center gap-1"
+                data-path="shop-tees"
+                href="#"
+              >
+                <span>View All Tees</span>
+                <span class="material-symbols-outlined text-base"
+                  >arrow_forward</span
+                >
+              </a>
+            </div>
+            <!-- Related Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop">
+              <!-- Related Item 1 -->
+              <div
+                class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm flex flex-col gap-space-sm group"
+              >
+                <div
+                  class="aspect-square rounded-DEFAULT overflow-hidden bg-surface-container-low relative"
+                >
+                  <img
+                    alt="Club Graphic Tee Navy"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    data-alt="Vintage washed navy streetwear t-shirt with classic tonal chest graphic displayed on warm cream backdrop, authentic Jamaican boutique style"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6VX9r5kbA-e_6oRiPFadVKF_QXBVowWqRmGejkYkvseo3R6zdd5cVl5TulmlEozZltT8JUUBqDZ5Z411BK_hcXUy-0fS9TSKQ58y0PmztIx4cFwXOfpXSxveu6PpZsFdV295mXND4P86o0uVlIRcqx93m7CKELS0BSt37dVAjK_xuhr6bHe9ZhoE3iD4sJ4xbMUXD_79sbR3h-NIWSNzqKmtFaieRs4VzqZ9LqAjZAX-JZsAgcxJ7TQ"
+                  />
+                  <span
+                    class="absolute top-2 left-2 bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded-full"
+                  >
+                    NIKE
+                  </span>
+                </div>
+                <div class="flex flex-col">
+                  <span
+                    class="font-title-lg text-title-lg text-on-surface font-semibold group-hover:text-primary transition-colors"
+                    >Tonal Swoosh Heavyweight</span
+                  >
+                  <div class="flex items-center justify-between mt-1">
+                    <span class="font-price-tag text-price-tag text-primary"
+                      >$4,800 JMD</span
+                    >
+                    <span
+                      class="font-body-sm text-body-sm text-on-surface-variant"
+                      >S, M, L in stock</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- Related Item 2 -->
+              <div
+                class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm flex flex-col gap-space-sm group"
+              >
+                <div
+                  class="aspect-square rounded-DEFAULT overflow-hidden bg-surface-container-low relative"
+                >
+                  <img
+                    alt="Ivory Retro Tee"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    data-alt="Clean off-white ivory athletic cotton crewneck tee with minimal black vintage logo, relaxed oversized fit flatlay with warm morning light"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB40damsTevIaEVmAFXTROdSup-AFZg0vbXQBlPewr0h6Losf0SsbQpKUUgREK-OmWDQgFGEwGGe_YgUyDyb1QP54cHID5tIM-D4Gkd_p2igr6EnzgXF1LHh_r2UXl8JUJwS29RqjB9JqZ8KBHov_N-i1e_tu89kyOE4Nu2aOGq1XSMpYra5-pqQ7YjEfH9kmAqGFeNkqNN5MLm8DwvdY1dF3EimAkvfat2rCN4S3J1dHmnNxrgci-6Gg"
+                  />
+                  <span
+                    class="absolute top-2 left-2 bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded-full"
+                  >
+                    ADIDAS
+                  </span>
+                </div>
+                <div class="flex flex-col">
+                  <span
+                    class="font-title-lg text-title-lg text-on-surface font-semibold group-hover:text-primary transition-colors"
+                    >Originals Archive Boxy Tee</span
+                  >
+                  <div class="flex items-center justify-between mt-1">
+                    <span class="font-price-tag text-price-tag text-primary"
+                      >$5,000 JMD</span
+                    >
+                    <span
+                      class="font-body-sm text-body-sm text-on-surface-variant"
+                      >M, L, XL in stock</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- Related Item 3 -->
+              <div
+                class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm flex flex-col gap-space-sm group"
+              >
+                <div
+                  class="aspect-square rounded-DEFAULT overflow-hidden bg-surface-container-low relative"
+                >
+                  <img
+                    alt="Puma Graphic Tee Charcoal"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    data-alt="Charcoal black heavyweight oversized graphic t-shirt laid flat against warm wood surface, clean screen print detailing and pristine collar"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqiF-CIRONRtK2TFL1Pmsq6C-hK3xiK63e_q0lwvEfvwU6_QYzC9Mu_8SEKV0Jq2Dm0UfAlL7A7RQr7wT5K-vXxRWkXyBFe1jAY8R6gnJ7RVt8Zy-MMEzNmcpMWfeKKU-EUP1Ve_XmRA3cvWbEb_ml1jIRpoGt7X2z15QmRLGRW88QR70jiu8WQcLDnZJAvYmumUgLC29ifvbURGB1CKFNka-a4d70q-c4QdePB9i8pB6teRwvXNieeA"
+                  />
+                  <span
+                    class="absolute top-2 left-2 bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded-full"
+                  >
+                    PUMA
+                  </span>
+                </div>
+                <div class="flex flex-col">
+                  <span
+                    class="font-title-lg text-title-lg text-on-surface font-semibold group-hover:text-primary transition-colors"
+                    >Downtown Relaxed Graphic</span
+                  >
+                  <div class="flex items-center justify-between mt-1">
+                    <span class="font-price-tag text-price-tag text-primary"
+                      >$4,500 JMD</span
+                    >
+                    <span
+                      class="font-body-sm text-body-sm text-on-surface-variant"
+                      >L left only</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- Size Guide Dialog / Drawer (Hidden by default) -->
+        <div
+          class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-xs flex items-center justify-center hidden p-space-md"
+          id="sizeGuideModal"
+        >
+          <div
+            class="bg-surface-container-lowest max-w-lg w-full rounded-lg shadow-xl p-space-lg flex flex-col gap-space-md transform transition-all"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-primary text-2xl"
+                  >straighten</span
+                >
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">
+                  Heavyweight Tee Sizing Guide
+                </h3>
+              </div>
+              <button
+                class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-surface-container text-on-surface-variant"
+                onclick="closeSizeModal()"
+                type="button"
+              >
+                <span class="material-symbols-outlined">close</span>
+              </button>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">
+              All measurements reflect flat-laid chest circumference and body
+              length in inches.
+            </p>
+            <!-- Measurement Table -->
+            <div
+              class="overflow-x-auto rounded-DEFAULT bg-surface-container-low p-space-sm"
+            >
+              <table class="w-full text-left font-body-sm text-body-sm">
+                <thead>
+                  <tr class="text-on-surface font-bold">
+                    <th class="py-2 px-3">Size</th>
+                    <th class="py-2 px-3">Chest (in)</th>
+                    <th class="py-2 px-3">Length (in)</th>
+                    <th class="py-2 px-3">Fit Profile</th>
+                  </tr>
+                </thead>
+                <tbody class="text-on-surface-variant divide-y-0">
+                  <tr class="bg-surface-container-lowest/60">
+                    <td class="py-2 px-3 font-bold text-on-surface">S</td>
+                    <td class="py-2 px-3">38 - 40"</td>
+                    <td class="py-2 px-3">28.0"</td>
+                    <td class="py-2 px-3">Trim Streetwear</td>
+                  </tr>
+                  <tr
+                    class="bg-surface-container-lowest/90 font-semibold text-primary"
+                  >
+                    <td class="py-2 px-3 font-bold text-on-surface">
+                      M (Selected)
+                    </td>
+                    <td class="py-2 px-3">42 - 44"</td>
+                    <td class="py-2 px-3">29.0"</td>
+                    <td class="py-2 px-3">Relaxed Boxy</td>
+                  </tr>
+                  <tr class="bg-surface-container-lowest/60">
+                    <td class="py-2 px-3 font-bold text-on-surface">L</td>
+                    <td class="py-2 px-3">46 - 48"</td>
+                    <td class="py-2 px-3">30.0"</td>
+                    <td class="py-2 px-3">Oversized Drop</td>
+                  </tr>
+                  <tr class="bg-surface-container-lowest/40 opacity-60">
+                    <td
+                      class="py-2 px-3 font-bold text-on-surface line-through"
+                    >
+                      XL
+                    </td>
+                    <td class="py-2 px-3">50 - 52"</td>
+                    <td class="py-2 px-3">31.0"</td>
+                    <td class="py-2 px-3">Sold Out</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="flex items-center justify-between pt-space-xs">
+              <a
+                class="font-label-md text-label-md text-[#25D366] font-bold flex items-center gap-1 hover:underline"
+                href="https://wa.me/18765558337?text=Hi%20Dave,%20could%20you%20help%20me%20measure%20the%20chest%20width%20of%20the%20Retro%20Club%20tee?"
+                target="_blank"
+              >
+                <span class="material-symbols-outlined text-base">chat</span>
+                <span>Ask Dave for tailor measurements</span>
+              </a>
+              <button
+                class="px-space-md py-space-xs bg-inverse-surface text-inverse-on-surface font-label-md text-label-md rounded-full hover:bg-inverse-surface/90"
+                onclick="closeSizeModal()"
+                type="button"
+              >
+                Got it
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Interactive JavaScript -->
+        <script>
+          let currentQty = 1;
+          let selectedSize = "M";
+
+          function changeQty(delta) {
+            currentQty = Math.max(1, Math.min(4, currentQty + delta));
+            const counterEl = document.getElementById("qtyCounter");
+            if (counterEl) {
+              counterEl.textContent = currentQty;
+            }
+          }
+
+          function selectSize(btn) {
+            const allPills = document.querySelectorAll(".size-pill");
+            allPills.forEach((pill) => {
+              if (!pill.hasAttribute("disabled")) {
+                pill.classList.remove(
+                  "bg-inverse-surface",
+                  "text-inverse-on-surface",
+                  "font-bold",
+                  "shadow-md",
+                );
+                pill.classList.add(
+                  "bg-surface-container-low",
+                  "text-on-surface",
+                  "font-semibold",
+                );
+                const sub = pill.querySelector("span:last-child");
+                if (sub && sub.textContent === "Selected") {
+                  sub.textContent = sub.dataset.origStock || "In stock";
+                  sub.className = "font-label-sm text-[10px] text-primary";
+                }
+              }
+            });
+
+            btn.classList.remove(
+              "bg-surface-container-low",
+              "text-on-surface",
+              "font-semibold",
+            );
+            btn.classList.add(
+              "bg-inverse-surface",
+              "text-inverse-on-surface",
+              "font-bold",
+              "shadow-md",
+            );
+
+            const sub = btn.querySelector("span:last-child");
+            if (sub) {
+              if (!sub.dataset.origStock) {
+                sub.dataset.origStock = sub.textContent;
+              }
+              sub.textContent = "Selected";
+              sub.className =
+                "font-label-sm text-[10px] text-primary-fixed-dim";
+            }
+
+            selectedSize = btn.dataset.size || "M";
+          }
+
+          function updateGallery(button, altPrompt) {
+            const mainImg = document.getElementById("mainProductDisplay");
+            if (mainImg) {
+              mainImg.setAttribute("data-alt", altPrompt);
+              // Subtle bump animation
+              mainImg.classList.add("scale-[1.01]");
+              setTimeout(() => mainImg.classList.remove("scale-[1.01]"), 200);
+            }
+
+            const allThumbs = document.querySelectorAll(".thumb-btn");
+            allThumbs.forEach((t) => {
+              t.classList.remove("ring-2", "ring-primary", "opacity-100");
+              t.classList.add("opacity-80");
+            });
+            button.classList.add("ring-2", "ring-primary", "opacity-100");
+            button.classList.remove("opacity-80");
+          }
+
+          function triggerAddToCart() {
+            const btn = document.getElementById("addToBagBtn");
+            if (!btn) return;
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML =
+              '<span class="material-symbols-outlined text-2xl animate-spin">sync</span><span>Adding to cart...</span>';
+            btn.classList.add("opacity-80");
+
+            setTimeout(() => {
+              btn.innerHTML =
+                '<span class="material-symbols-outlined text-2xl">check_circle</span><span>Added to cart (' +
+                selectedSize +
+                " &times; " +
+                currentQty +
+                ")</span>";
+              btn.classList.remove(
+                "opacity-80",
+                "bg-primary-container",
+                "text-on-primary-container",
+              );
+              btn.classList.add(
+                "bg-inverse-surface",
+                "text-inverse-on-surface",
+              );
+
+              // Update shell bag badge if available
+              const shellBadge = document.querySelector(
+                "button span.bg-primary-container",
+              );
+              if (shellBadge) {
+                const currentCount = parseInt(shellBadge.textContent) || 0;
+                shellBadge.textContent = currentCount + currentQty;
+              }
+
+              setTimeout(() => {
+                btn.innerHTML = originalHTML;
+                btn.classList.remove(
+                  "bg-inverse-surface",
+                  "text-inverse-on-surface",
+                );
+                btn.classList.add(
+                  "bg-primary-container",
+                  "text-on-primary-container",
+                );
+              }, 3200);
+            }, 500);
+          }
+
+          function openSizeModal() {
+            const modal = document.getElementById("sizeGuideModal");
+            if (modal) modal.classList.remove("hidden");
+          }
+
+          function closeSizeModal() {
+            const modal = document.getElementById("sizeGuideModal");
+            if (modal) modal.classList.add("hidden");
+          }
+        </script>
+      </div>
+    </main>
+    <footer class="w-full bg-[#FFF8E7] border-t border-primary-container/30">
+      <div
+        class="max-w-[1200px] mx-auto px-margin-desktop pt-space-2xl pb-space-xl"
+      >
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop"
+        >
+          <div class="flex flex-col gap-space-sm">
+            <div class="flex items-center gap-space-sm mb-space-xs">
+              <img
+                alt="Brand Tees n more"
+                class="w-8 h-8 rounded-full object-cover"
+                src="https://lh3.googleusercontent.com/aida/AEtjO1VeXqDFF0io2h3gXtxXJsf3OW0-Z2L1k2CVjapkgofGVpzfVCMLeEDSpebgNKPr_hIWLcxu9FnKOU4N6Qa7GcdvS1t0E6U2dzQA-kszVjzyxKja7KbWT9K2yRaZQBGmRjf1kAvbzbl7AtDic2mYm6uUkWEwrwWybhD16DRhNXcqEHKIOm0vV6mz9qd3iTPtA119e9uwAC2OCDjXM-79MfE6yjwfPHibCuhNzld4QNrMRUE7933fc8SqHqxl1Fv0bwYwKEMKZyaCAQ"
+              /><span class="font-title-lg text-title-lg text-on-surface"
+                >Brand Tees n more</span
+              >
+            </div>
+            <p
+              class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+            >
+              Bringing crisp authentic streetwear tees and premium oversized
+              sportswear to Jamaica. Hand-selected cuts with zero checkout
+              hassle.
+            </p>
+            <div
+              class="mt-space-xs p-space-sm rounded-lg bg-surface-container-lowest/80 border border-outline-variant/40"
+            >
+              <span
+                class="font-label-sm text-label-sm text-primary uppercase font-bold block"
+                >Kingston Pickup Hub</span
+              ><span class="font-body-sm text-body-sm text-on-surface"
+                >Shop 4B, Constant Spring Road, Kingston 10</span
+              >
+            </div>
+          </div>
+          <div class="flex flex-col gap-space-xs">
+            <h4
+              class="font-headline-sm text-headline-sm text-on-surface mb-space-xs"
+            >
+              Brand Catalogue
+            </h4>
+            <ul
+              class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"
+            >
+              <li class="hover:text-primary transition-colors">
+                <a data-path="shop-tees" href="#"
+                  >Nike Sportswear &amp; Club Tees</a
+                >
+              </li>
+              <li class="hover:text-primary transition-colors">
+                <a data-path="shop-tees" href="#"
+                  >Adidas Originals Trefoil Drops</a
+                >
+              </li>
+              <li class="hover:text-primary transition-colors">
+                <a data-path="shop-tees" href="#">Puma Graphic Street Line</a>
+              </li>
+              <li class="hover:text-primary transition-colors">
+                <a data-path="shop-tees" href="#"
+                  >Reebok Classic Vector Collection</a
+                >
+              </li>
+              <li class="hover:text-primary transition-colors">
+                <a data-path="shop-tees" href="#"
+                  >Guess Triangle Logo Apparel</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-space-xs">
+            <h4
+              class="font-headline-sm text-headline-sm text-on-surface mb-space-xs"
+            >
+              Delivery Options
+            </h4>
+            <ul
+              class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"
+            >
+              <li class="flex items-start gap-space-xs">
+                <span
+                  class="material-symbols-outlined text-primary text-base mt-0.5"
+                  >local_shipping</span
+                ><span>Knutsford Express islandwide to any depot station</span>
+              </li>
+              <li class="flex items-start gap-space-xs">
+                <span
+                  class="material-symbols-outlined text-primary text-base mt-0.5"
+                  >mail</span
+                ><span
+                  >ZipMail Jamaica Post counter pickup (all 14 parishes)</span
+                >
+              </li>
+              <li class="flex items-start gap-space-xs">
+                <span
+                  class="material-symbols-outlined text-primary text-base mt-0.5"
+                  >location_on</span
+                ><span>Kingston 10 scheduled direct storefront meetup</span>
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-space-xs">
+            <h4
+              class="font-headline-sm text-headline-sm text-on-surface mb-space-xs"
+            >
+              Contact &amp; Social
+            </h4>
+            <ul
+              class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"
+            >
+              <li class="flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-primary text-base"
+                  >chat</span
+                ><a
+                  class="hover:text-primary transition-colors"
+                  href="https://wa.me/18765558337"
+                  >WhatsApp +1 (876) 555-8337</a
+                >
+              </li>
+              <li class="flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-primary text-base"
+                  >photo_camera</span
+                ><a class="hover:text-primary transition-colors" href="#"
+                  >@brandteesnmore (Instagram)</a
+                >
+              </li>
+              <li class="flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-primary text-base"
+                  >call</span
+                ><span>Direct: +1 (876) 555-8337</span>
+              </li>
+              <li class="flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-primary text-base"
+                  >alternate_email</span
+                ><span>orders@brandteesnmore.jm</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-full bg-inverse-surface py-space-sm px-margin-desktop text-center"
+      >
+        <p
+          class="font-label-sm text-label-sm text-inverse-on-surface tracking-wide"
+        >
+          Strictly Request-to-Order • No online cards required • Payment and
+          delivery confirmed directly with Dave via WhatsApp.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
